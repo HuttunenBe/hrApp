@@ -1,0 +1,42 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.box {
+  border: solid;
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  line-height: 1.2;
+  width: 19vw;
+  font-weight: bold;
+  min-width: 200px;
+  transition: transform 2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  color: rgb(226, 195, 255);
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  font-size: 0.9rem;
+}
