@@ -51,9 +51,8 @@ export const employees = [
       location: "Helsinki",
       department: "Sales",
       skills: ["Sales Strategy", "Customer Relationship", "Negotiation"],
-    }, 
+    },
     {
-      
       id: 5,
       name: "Jani Rautio",
       title: "IT Specialist",
