@@ -1,0 +1,72 @@
+
+
+.ID {
+    font-weight: bold;
+    margin-top: 1.2rem;
+  }
+  
+  #departmentPicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -90px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box {
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    max-width: 350px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #ddd;
+    background-color: #ffffffcc;
+  }
+  
+  .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  }
+  
+  .box p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .tickets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .message {
+    color: #0f1c10;
+    background-color: #ffffffce;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .Skills {
+    font-weight: 700;
+  }

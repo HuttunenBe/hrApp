@@ -1,3 +1,5 @@
+import './employees.css';
+
 const PersonCard = (props) => {
   return (
     <div className="box">

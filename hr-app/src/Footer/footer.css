@@ -1,0 +1,15 @@
+
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    color: #555;
+    padding: 2rem;
+    border-radius: 2rem;
+    border-bottom: 3px solid #ddd;
+  }
+  
+  footer h2 {
+    font-size: 1.3rem;
+  }
