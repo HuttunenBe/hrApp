@@ -33,8 +33,9 @@ const animalToEmoji = (animal) => {
   if (animal === "Fox") return "🦊";
   if (animal === "Penguin") return "🐧";
   if (animal === "Chicken") return "🐔";
-  if (animal === "Hawk") return "🦅";
+  if (animal === "Eagle") return "🦅";
   if (animal === "Dolphin") return "🐬";
+  return "🌱"
 };
 
 const PersonList = () => {
