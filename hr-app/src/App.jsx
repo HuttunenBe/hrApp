@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Footer from "./Footer"
+import Footer from "./Footer";
 import PersonList from "./Employees/PersonList";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div>
       <Header appName="Hr App" />
       <main>
-        <PersonList /> 
+        <PersonList />
       </main>
       <Footer className="REACT25" />
     </div>

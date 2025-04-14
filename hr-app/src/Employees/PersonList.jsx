@@ -1,15 +1,14 @@
 import PersonCard from "./PersonCard";
 import { employees } from "./EmployeesData";
-
-
+import GetDepartmentImage from "./DepartmentImages";
 
 const calculateYearsInService = (employee) => {
   const currentDate = new Date();
   const startDate = new Date(employee.startDate);
-  const yearsInService = (currentDate - startDate) / (1000 * 60 * 60 * 24 * 365);
-  return yearsInService; 
+  const yearsInService =
+    (currentDate - startDate) / (1000 * 60 * 60 * 24 * 365);
+  return yearsInService;
 };
-
 
 const schedulReminder = (yearsOfService) => {
   if (yearsOfService === 5) {
@@ -23,7 +22,7 @@ const schedulReminder = (yearsOfService) => {
   }
 };
 
-const animalEmoji = (animal) => {
+const animalToEmoji = (animal) => {
   if (animal === "Dog") return "🐶";
   if (animal === "Cat") return "🐱";
   if (animal === "Horse") return "🐴";
@@ -45,24 +44,23 @@ const PersonList = () => {
         {employees[0].map((employee) => {
           const yearsInService = calculateYearsInService(employee);
           const reminderEmoji = schedulReminder(yearsInService);
+          const animalEmoji = animalToEmoji(employee.animal);
+          const departmentImage = GetDepartmentImage(employee.department);
           return (
-            <div key={employee.id} className = 'message'>
-              <PersonCard {...employee} />
-              <p>
-                {employee.name} has worked {yearsInService.toFixed(1)} years in the
-                company.
-              </p>
-              <p>{reminderEmoji}</p>
-              <p>{animalEmoji(employee.animal)}</p>
-              </div>
+            <div key={employee.id} className="message">
+              <PersonCard
+                {...employee}
+                reminderEmoji={reminderEmoji}
+                animalEmoji={animalEmoji}
+                yearsInService={yearsInService}
+                departmentImage={departmentImage}
+              />
+            </div>
           );
         })}
       </div>
     </div>
   );
 };
-
-
-
 
 export default PersonList;
