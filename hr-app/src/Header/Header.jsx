@@ -3,9 +3,11 @@ import './header.css';
 function Header(props) {
   return (
     <header>
+      <div className="headingCircle">
       <div className="heading">
         <h1>{props.appName}</h1>
         <h2>Employees</h2>
+      </div>
       </div>
       {/* <nav>
         <ul>
@@ -15,6 +17,7 @@ function Header(props) {
         </ul>
       </nav>*/}
     </header>
+ 
   );
 }
 
