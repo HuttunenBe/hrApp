@@ -33,4 +33,11 @@ Header {
     height: 250px;
     border-radius: 50%;
     margin-top: 2rem;
+
+  }
+
+  .headingCircle{
+    width: 110%;
+    border: white solid 3px;
+    border-radius: 50%;
   }

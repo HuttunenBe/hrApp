@@ -2,6 +2,7 @@ import "./employees.css";
 
 const PersonCard = (props) => {
   return (
+    <div className="box2">
     <div className="box">
       <img src={props.departmentImage} id="departmentPicture" />
 
@@ -22,6 +23,7 @@ const PersonCard = (props) => {
       </div>
       <p>Years in Service: {props.yearsInService.toFixed(1)} years</p>
       <p>{props.reminderEmoji}</p>
+    </div>
     </div>
   );
 };
