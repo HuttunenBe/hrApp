@@ -1,0 +1,52 @@
+Header {
+  margin-bottom: 10%;
+  margin-left: 4rem;
+  background-color: #4dbb8dda;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 2rem;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: left;
+  text-decoration: double;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.heading {
+  margin-bottom: 10%;
+  margin-left: 4rem;
+  background-color: #3f3f3fda;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 2rem;
+  box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+
+.headingCircle {
+  width: 110%;
+  border: white solid 3px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.headingCircle:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}

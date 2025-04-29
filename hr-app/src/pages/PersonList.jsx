@@ -1,6 +1,6 @@
-import PersonCard from "./PersonCard";
-import { employees } from "./EmployeesData";
-import GetDepartmentImage from "./DepartmentImages";
+import PersonCard from "../components/Employees/PersonCard";
+import GetDepartmentImage from "../components/Employees/DepartmentImages";
+import Header from "../components/Header/Header";
 
 const calculateYearsInService = (employee) => {
   const currentDate = new Date();
@@ -35,18 +35,21 @@ const animalToEmoji = (animal) => {
   if (animal === "Chicken") return "🐔";
   if (animal === "Eagle") return "🦅";
   if (animal === "Dolphin") return "🐬";
-  return "🌱"
+  return "🌱";
 };
 
-const PersonList = () => {
+const PersonList = ({ employeeData }) => {
+  console.log(employeeData);
   return (
     <div>
+      <Header appName="Hr App" />
       <div className="tickets">
-        {employees[0].map((employee) => {
+        {employeeData.map((employee) => {
           const yearsInService = calculateYearsInService(employee);
           const reminderEmoji = schedulReminder(yearsInService);
           const animalEmoji = animalToEmoji(employee.animal);
           const departmentImage = GetDepartmentImage(employee.department);
+
           return (
             <div key={employee.id} className="message">
               <PersonCard
