@@ -1,5 +1,5 @@
 export const employees = [
-  [
+  
     {
       id: 1,
       name: "Aino Virtanen",
@@ -195,5 +195,5 @@ export const employees = [
       department: "Engineering",
       skills: ["Java", "Python", "Software Development"],
     },
-  ],
+  
 ];
