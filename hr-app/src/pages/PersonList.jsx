@@ -51,7 +51,7 @@ const PersonList = ({ employeeData }) => {
           const departmentImage = GetDepartmentImage(employee.department);
 
           return (
-            <div key={employee.id} className="message">
+            <div key={employee.id} {...employee}className="message">
               <PersonCard
                 {...employee}
                 reminderEmoji={reminderEmoji}

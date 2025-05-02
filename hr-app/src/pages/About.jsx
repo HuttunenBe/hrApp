@@ -6,7 +6,7 @@ function About() {
     <div>
       <Header appName="Hr App" />
       <main>
-        <h1>Hello about</h1>
+        <h3>Hello about</h3>
       </main>
       <Footer className="REACT25" />
     </div>
