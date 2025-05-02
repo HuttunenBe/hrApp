@@ -6,6 +6,7 @@ import About from "./pages/About";
 import PersonList from "./pages/PersonList";
 import AddEmployee from "./pages/AddEmployee";
 
+
 const App = () => {
   const [employeeData, setEmployeeData] = useState(employees);
 
@@ -19,10 +20,7 @@ const App = () => {
       path: "/",
       element: <PersonList employeeData={employeeData} />,
     },
-    {
-      path: "/PersonList",
-      element: <PersonList employeeData={employeeData} />,
-    },
+  
     {
       path: "/about",
       element: <About />,

@@ -1,7 +1,8 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import "./addEmployee.css";
 
 const AddEmployee = ({ onAddEmployee }) => {
   const [employeesData, setEmployeesData] = useState({
@@ -17,6 +18,8 @@ const AddEmployee = ({ onAddEmployee }) => {
     department: "",
     skills: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +37,7 @@ const AddEmployee = ({ onAddEmployee }) => {
     };
 
     onAddEmployee(newEmployee);
+    navigate("/");
 
     setEmployeesData({
       id: "",
@@ -55,7 +59,7 @@ const AddEmployee = ({ onAddEmployee }) => {
       <Header appName="Hr App" />
       <main>
         <div>
-          <h1>Add a new employee</h1>
+          <h3>Add a new employee</h3>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -94,7 +98,7 @@ const AddEmployee = ({ onAddEmployee }) => {
             />
             <input
               name="startDate"
-              type="number"
+              type="date"
               value={employeesData.startDate}
               onChange={handleChange}
               placeholder="Start Date"
