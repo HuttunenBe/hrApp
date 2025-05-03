@@ -61,6 +61,13 @@ const AddEmployee = ({ onAddEmployee }) => {
         <div>
           <h3>Add a new employee</h3>
           <form onSubmit={handleSubmit}>
+          <input
+              type="text"
+              name="name"
+              value={employeesData.name}
+              onChange={handleChange}
+              placeholder="Name"
+            />
             <input
               type="text"
               name="title"

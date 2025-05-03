@@ -18,7 +18,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PersonList employeeData={employeeData} />,
+      element: <PersonList employeeData={employeeData} setEmployeeData={setEmployeeData}/>,
     },
   
     {

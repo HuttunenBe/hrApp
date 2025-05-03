@@ -1,6 +1,7 @@
 import PersonCard from "../components/Employees/PersonCard";
 import GetDepartmentImage from "../components/Employees/DepartmentImages";
 import Header from "../components/Header/Header";
+import { useState, useEffect } from "react";
 
 const calculateYearsInService = (employee) => {
   const currentDate = new Date();
@@ -51,7 +52,7 @@ const PersonList = ({ employeeData }) => {
           const departmentImage = GetDepartmentImage(employee.department);
 
           return (
-            <div key={employee.id} {...employee}className="message">
+            <div key={employee.id}className="message">
               <PersonCard
                 {...employee}
                 reminderEmoji={reminderEmoji}
