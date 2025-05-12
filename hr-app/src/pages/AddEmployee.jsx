@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./addEmployee.css";
+import axios from 'axios';
 
 const AddEmployee = ({ onAddEmployee }) => {
   const [employeesData, setEmployeesData] = useState({
@@ -30,14 +31,20 @@ const AddEmployee = ({ onAddEmployee }) => {
     e.preventDefault();
 
     const newEmployee = {
-      id: Date.now(),
       ...employeesData,
       salary: parseFloat(employeesData.salary),
       skills: employeesData.skills.split(","),
     };
 
-    onAddEmployee(newEmployee);
-    navigate("/");
+    
+
+    axios.post("http://localhost:3002/employees", newEmployee).then((res) => {
+      console.log(res);
+      onAddEmployee(res.data);
+      navigate("/");
+    });
+
+   
 
     setEmployeesData({
       id: "",
@@ -61,6 +68,13 @@ const AddEmployee = ({ onAddEmployee }) => {
         <div>
           <h3>Add a new employee</h3>
           <form onSubmit={handleSubmit}>
+          <input
+              type="text"
+              name="name"
+              value={employeesData.name}
+              onChange={handleChange}
+              placeholder="Name"
+            />
             <input
               type="text"
               name="title"
