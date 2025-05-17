@@ -1,4 +1,4 @@
-.ID {
+.id {
   font-weight: bold;
   font-size: 2.2rem;
   margin-top: 1.2rem;
@@ -10,36 +10,34 @@
   border-radius: 50%;
   object-fit: cover;
   margin-top: -90px;
-  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.6);
   margin-bottom: 1rem;
+  border: rgba(255, 255, 255, 0.686) 3px solid;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.6);
 }
 
-.box {
-  border: 1px solid #e0e0e0;
-  padding: 1.5rem 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 350px;
-  min-height: 400px;
-
+.containerTwo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  display: flex;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  width: 350px;
+  height: 470px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   border-bottom: 3px solid #ddd;
   background-color: #ffffffcc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.box:hover {
+.containerTwo:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
-.box p {
+.containerTwo p {
   font-size: 1rem;
   margin: 0;
   color: #333;
@@ -47,7 +45,7 @@
   text-align: center;
 }
 
-.box2 {
+.container {
   border: black solid 3px;
   padding: 0.4rem;
   border-radius: 2rem;
@@ -55,7 +53,7 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
 }
 
-.tickets {
+.employeeTickets {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -76,4 +74,14 @@
 
 .Skills {
   font-weight: 700;
+}
+
+@media (max-width: 789px) {
+  .containerTwo {
+    width: 72vw;
+    height: auto;
+  }
+  .containerTwo p {
+    font-size: 1rem;
+  }
 }

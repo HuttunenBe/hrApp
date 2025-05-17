@@ -7,7 +7,6 @@ import PersonList from "./pages/PersonList";
 import AddEmployee from "./pages/AddEmployee";
 import axios from "axios";
 
-
 const App = () => {
   const [employeeData, setEmployeeData] = useState(employees);
 
@@ -25,9 +24,14 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PersonList employeeData={employeeData} setEmployeeData={setEmployeeData}/>,
+      element: (
+        <PersonList
+          employeeData={employeeData}
+          setEmployeeData={setEmployeeData}
+        />
+      ),
     },
-  
+
     {
       path: "/about",
       element: <About />,

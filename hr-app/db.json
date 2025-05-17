@@ -252,38 +252,6 @@
       "skills": [
         "Java",
         "Python",
-        "Software Development"
-      ]
-    },
-    {
-      "id": "",
-      "name": "Hannele",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": "",
-      "name": "Annukka",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    }
-  ]
-}
+        "Software Development"]
+      }
+    ]}

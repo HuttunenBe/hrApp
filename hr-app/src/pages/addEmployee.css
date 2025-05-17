@@ -1,33 +1,14 @@
-main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-  background-color: #f4f4f4b6;
-  min-height: 80vh;
-  max-width: 100vw;
-  border-radius: 2rem;
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-}
-
-h3 {
-  color: rgb(63, 63, 63);
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
-}
-
 form {
+  display: flex;
+  flex-direction: column;
   background: white;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: auto;
   max-width: 500px;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
+  margin: 0 auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 input {
@@ -36,19 +17,39 @@ input {
   border-radius: 0.5rem;
   font-size: 1rem;
   width: 100%;
+  cursor: pointer;
+}
+
+input:focus {
+  border-color: #4dbb8d;
+  box-shadow: 0 0 2px #4dbb8d;
+  outline: none;
 }
 
 button {
-  background-color: #4dbb8d;
+  background-color: #0b7c51;
   color: white;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 500;
   padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.9s ease, transform 0.9s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
-  background-color: #3ca77a;
+  background-color: #3d569b;
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+
+
+@media (max-width: 680px) {
+  main h3 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./addEmployee.css";
-import axios from 'axios';
+import axios from "axios";
 
 const AddEmployee = ({ onAddEmployee }) => {
   const [employeesData, setEmployeesData] = useState({
@@ -36,15 +36,11 @@ const AddEmployee = ({ onAddEmployee }) => {
       skills: employeesData.skills.split(","),
     };
 
-    
-
     axios.post("http://localhost:3002/employees", newEmployee).then((res) => {
       console.log(res);
       onAddEmployee(res.data);
       navigate("/");
     });
-
-   
 
     setEmployeesData({
       id: "",
@@ -64,17 +60,20 @@ const AddEmployee = ({ onAddEmployee }) => {
   return (
     <div>
       <Header appName="Hr App" />
+      <h2>Add a New Employee</h2>
       <main>
         <div>
-          <h3>Add a new employee</h3>
           <form onSubmit={handleSubmit}>
-          <input
+            <h3>Enter employee details</h3>
+
+            <input
               type="text"
               name="name"
               value={employeesData.name}
               onChange={handleChange}
               placeholder="Name"
             />
+
             <input
               type="text"
               name="title"
@@ -82,6 +81,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Title"
             />
+
             <input
               name="salary"
               type="number"
@@ -89,6 +89,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Salary"
             />
+
             <input
               name="phone"
               type="number"
@@ -96,6 +97,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Phone"
             />
+
             <input
               name="email"
               type="text"
@@ -103,6 +105,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Email"
             />
+
             <input
               name="animal"
               type="text"
@@ -110,6 +113,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Animal"
             />
+
             <input
               name="startDate"
               type="date"
@@ -117,6 +121,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Start Date"
             />
+
             <input
               name="location"
               type="text"
@@ -124,6 +129,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Location"
             />
+
             <input
               name="department"
               type="text"
@@ -131,6 +137,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Department"
             />
+
             <input
               name="skills"
               type="text"
