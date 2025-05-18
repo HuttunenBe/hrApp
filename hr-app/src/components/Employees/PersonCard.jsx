@@ -24,9 +24,9 @@ const PersonCard = (props) => {
         <p>Location: {props.location}</p>
         <p>Department: {props.department}</p>
         <div className="Skills">
-          <p> Skills: {props.skills.join(", ")}</p>
+          <p> Skills: {(props.skills ?? []).join(", ")}</p>
         </div>
-        <p>Years in Service: {props.yearsInService.toFixed(1)} years</p>
+        <p>Years in Service: {(props.yearsInService ?? 0).toFixed(1)} years</p>
         <p>{props.reminderEmoji}</p>
       </div>
     </div>

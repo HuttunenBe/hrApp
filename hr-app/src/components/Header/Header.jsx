@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
 
@@ -51,7 +51,7 @@ function Header(props) {
               <NavLink to="/About">About</NavLink>
             </li>
             <li>
-              <NavLink to="/">Personlist</NavLink>
+              <NavLink to="/">Employee list</NavLink>
             </li>
             <li>
               <NavLink to="/addEmployee">Add Employee</NavLink>
@@ -66,7 +66,7 @@ function Header(props) {
             <NavLink to="/About">About</NavLink>
           </li>
           <li>
-            <NavLink to="/">Personlist</NavLink>
+            <NavLink to="/">Employeelist</NavLink>
           </li>
           <li>
             <NavLink to="/addEmployee">Add Employee</NavLink>

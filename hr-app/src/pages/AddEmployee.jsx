@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "./addEmployee.css";
-import axios from "axios";
 
 const AddEmployee = ({ onAddEmployee }) => {
   const [employeesData, setEmployeesData] = useState({
-    id: "",
     name: "",
     title: "",
     salary: "",
@@ -32,18 +31,22 @@ const AddEmployee = ({ onAddEmployee }) => {
 
     const newEmployee = {
       ...employeesData,
+      id: Date.now(),
       salary: parseFloat(employeesData.salary),
       skills: employeesData.skills.split(","),
     };
 
-    axios.post("http://localhost:3002/employees", newEmployee).then((res) => {
-      console.log(res);
-      onAddEmployee(res.data);
-      navigate("/");
-    });
+    axios
+      .post("http://localhost:3005/employees", newEmployee)
+      .then((response) => {
+        onAddEmployee(response.data);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Failed to add employee:", error);
+      });
 
     setEmployeesData({
-      id: "",
       name: "",
       title: "",
       salary: "",

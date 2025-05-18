@@ -1,8 +1,7 @@
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import PersonCard from "../components/Employees/PersonCard";
 import GetDepartmentImage from "../components/Employees/DepartmentImages";
-import Header from "../components/Header/Header";
-import { useState, useEffect } from "react";
-import Footer from "../components/Footer/Footer";
 
 const calculateYearsInService = (employee) => {
   const currentDate = new Date();
@@ -41,7 +40,8 @@ const animalToEmoji = (animal) => {
 };
 
 const PersonList = ({ employeeData }) => {
-  console.log(employeeData);
+
+
   return (
     <div>
       <Header appName="Hr App" />

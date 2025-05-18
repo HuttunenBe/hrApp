@@ -1,5 +1,5 @@
-import "./footer.css";
 import { NavLink } from "react-router";
+import "./footer.css";
 
 function Footer(props) {
   return (
@@ -10,7 +10,7 @@ function Footer(props) {
             <NavLink to="/About">About</NavLink>
           </li>
           <li>
-            <NavLink to="/">Personlist</NavLink>
+            <NavLink to="/">Employee list</NavLink>
           </li>
           <li>
             <NavLink to="/addEmployee">Add Employee</NavLink>

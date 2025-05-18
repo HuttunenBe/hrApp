@@ -44,9 +44,8 @@ function About() {
           </section>
 
           <section className="sectionThree">
+            <h4>Why Choose Us?</h4>
             <p>
-              {" "}
-              <h4>Why Choose Us?</h4>
               Our app integrates all essential HR functionalities into a single
               platform. From detailed employee profiles to department-specific
               resources, we keep everything organized and accessible. Plus,
