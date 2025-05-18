@@ -1,9 +1,24 @@
-import './footer.css';
+import { NavLink } from "react-router";
+import "./footer.css";
 
 function Footer(props) {
   return (
     <footer>
-      <h2>Copyright {props.className}</h2>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/About">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Employee list</NavLink>
+          </li>
+          <li>
+            <NavLink to="/addEmployee">Add Employee</NavLink>
+          </li>
+        </ul>
+      </nav>
+
+      <h3>Copyright {props.className}</h3>
     </footer>
   );
 }

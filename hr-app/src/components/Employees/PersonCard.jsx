@@ -2,11 +2,16 @@ import "./employees.css";
 
 const PersonCard = (props) => {
   return (
-    <div className="box2">
-      <div className="box">
-        <img src={props.departmentImage} id="departmentPicture" />
+    <div className="container">
+      <div className="containerTwo">
+        <img
+          src={props.departmentImage}
+          id="departmentPicture"
+          alt="department images"
+          loading="lazy"
+        />
 
-        <p className="ID">ID: {props.id}</p>
+        <p className="id">Id: {props.id}</p>
         <p>Name: {props.name}</p>
         <p>Title: {props.title}</p>
         <p>Salary: {props.salary}€</p>
@@ -19,9 +24,9 @@ const PersonCard = (props) => {
         <p>Location: {props.location}</p>
         <p>Department: {props.department}</p>
         <div className="Skills">
-          <p> Skills: {props.skills}</p>
+          <p> Skills: {(props.skills ?? []).join(", ")}</p>
         </div>
-        <p>Years in Service: {props.yearsInService.toFixed(1)} years</p>
+        <p>Years in Service: {(props.yearsInService ?? 0).toFixed(1)} years</p>
         <p>{props.reminderEmoji}</p>
       </div>
     </div>

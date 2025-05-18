@@ -1,4 +1,4 @@
-export const employees = [
+export const array = [
   
     {
       id: 1,
@@ -195,5 +195,6 @@ export const employees = [
       department: "Engineering",
       skills: ["Java", "Python", "Software Development"],
     },
+
   
 ];

@@ -1,44 +1,53 @@
 import { useState, useEffect } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router";
-import { employees } from "./components/Employees/EmployeesData";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router";
+import axios from "axios";
 import About from "./pages/About";
 import PersonList from "./pages/PersonList";
 import AddEmployee from "./pages/AddEmployee";
-import axios from "axios";
-
+import "./App.css";
 
 const App = () => {
-  const [employeeData, setEmployeeData] = useState(employees);
+  const [employeeData, setEmployeeData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/employees").then((res) => {
-      setEmployeeData(res.data);
-    });
+    axios
+      .get("http://localhost:3005/employees")
+      .then((response) => {
+        setEmployeeData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error loading employees", error);
+      });
   }, []);
 
+
+  
   const addEmployeeHandler = (newEmployee) => {
-    console.log("Adding new employee:", newEmployee);
-    setEmployeeData((prev) => [...prev, { ...newEmployee, id: Date.now() }]);
+  
+    setEmployeeData((prev) => [...prev, { ...newEmployee }]);
   };
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <PersonList employeeData={employeeData} setEmployeeData={setEmployeeData}/>,
-    },
-  
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/addEmployee",
-      element: <AddEmployee onAddEmployee={addEmployeeHandler} />,
-    },
-  ]);
+  return (
+   
+    <BrowserRouter>
 
-  return <RouterProvider router={router} />;
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PersonList
+              employeeData={employeeData}
+              setEmployeeData={setEmployeeData}
+            />
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route
+          path="/addEmployee"
+          element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 };
-
 export default App;
