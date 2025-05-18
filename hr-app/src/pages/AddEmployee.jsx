@@ -68,7 +68,7 @@ const AddEmployee = ({ onAddEmployee }) => {
         <div>
           <form onSubmit={handleSubmit}>
             <h3>Enter employee details</h3>
-
+ <label htmlFor="name">name:</label>
             <input
               type="text"
               name="name"
@@ -76,7 +76,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Name"
             />
-
+ <label htmlFor="title">title</label>
             <input
               type="text"
               name="title"
@@ -84,7 +84,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Title"
             />
-
+ <label htmlFor="salary">salary:</label>
             <input
               name="salary"
               type="number"
@@ -92,7 +92,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Salary"
             />
-
+ <label htmlFor="phone">phone</label>
             <input
               name="phone"
               type="number"
@@ -100,7 +100,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Phone"
             />
-
+ <label htmlFor="email">email</label>
             <input
               name="email"
               type="text"
@@ -108,7 +108,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Email"
             />
-
+ <label htmlFor="animal">animal</label>
             <input
               name="animal"
               type="text"
@@ -116,7 +116,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Animal"
             />
-
+ <label htmlFor="startDate">start date</label>
             <input
               name="startDate"
               type="date"
@@ -124,7 +124,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Start Date"
             />
-
+ <label htmlFor="location">location</label>
             <input
               name="location"
               type="text"
@@ -132,7 +132,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Location"
             />
-
+ <label htmlFor="department">depatment</label>
             <input
               name="department"
               type="text"
@@ -140,7 +140,7 @@ const AddEmployee = ({ onAddEmployee }) => {
               onChange={handleChange}
               placeholder="Department"
             />
-
+ <label htmlFor="skills">skills</label>
             <input
               name="skills"
               type="text"
