@@ -16,7 +16,12 @@ A human resources management app built as the final project for the React course
 - Responsive design for different screen sizes
 
 
+
+
 ### 💻 What I learned 
+
+I learned so much through this project. I got to experience what it’s like to work with the React framework and manage multiple files. It really makes things easier especially when it comes to keeping the code clean. I spent a lot of time on CSS and I’m pretty happy how it turned out. Here are some things I learned:
+
 * UseState : Managing form input
 * UseEffect:  Loading data when page loads
 * UseNavigate:  Navigating after adding an employee
