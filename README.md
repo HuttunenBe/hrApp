@@ -15,6 +15,7 @@ A human resources management app built as the final project for the React course
 - Department images that change based on the department
 - Desktop and mobile friendly menu
 - Responsive design for different screen sizes
+- Moving logo that takes you back to about page
 
 ---
 
