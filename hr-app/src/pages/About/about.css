@@ -23,15 +23,14 @@
   font-weight: 500;
   border-bottom: 2px solid #8ea29f;
   border-radius: 0.2rem;
-  margin-bottom: 1.2rem;
+  margin-top: 1rem;
   padding: 1rem;
 }
 
 .textField p {
   font-size: 1.2rem;
   line-height: 1.5;
-  font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
   color: #2d2d2daa;
   padding: 1rem 0;
   max-width: 350px;
@@ -50,11 +49,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
-  gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 5rem;
-  padding: 0 5rem;
+  border-radius: 1rem;
+  background-color: rgba(128, 128, 128, 0.217);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+
+  padding: 2rem;
 }
 
 .sectionTwo,
@@ -63,14 +66,14 @@ section {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  background: #3589dc34;
-  background: #33f2b634;
-  background-color: #4dbb8d42;
+  background-color: #3589dc34;
+  background-color: #33f2b634;
   border-radius: 1rem;
   height: auto;
   padding: 3rem;
   gap: 2rem;
   flex-wrap: nowrap;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sectionThree {
@@ -82,6 +85,7 @@ section {
   padding-bottom: 2rem;
   border-radius: 1rem;
   width: auto;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sectionThree p,
@@ -92,22 +96,24 @@ section {
 
 section img {
   object-fit: cover;
-  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.6);
   border-radius: 0.5rem;
   margin: 0 auto;
 }
 
 .imageThree {
   max-width: 40vw;
+    width: 100%;
 }
 
 .imageTwo,
 .imageFour {
   max-width: 30vw;
+    width: 100%;
 }
 
 .imageOne {
   max-width: 40vw;
+    width: 100%;
 }
 
 @media (max-width: 1000px) {
@@ -151,5 +157,11 @@ section img {
   .textField p {
     font-size: 1rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageOne {
+    border-radius: 4px;
   }
 }

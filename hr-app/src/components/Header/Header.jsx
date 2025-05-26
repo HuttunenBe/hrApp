@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import "./header.css";
-
 function Header(props) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(!1);
   return (
     <header className="header">
       <NavLink to="/about">
@@ -17,17 +15,15 @@ function Header(props) {
           </div>
         </div>
       </NavLink>
-
       {!menuOpen && (
         <button
           id="menuToggle"
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setMenuOpen(!0)}
           aria-label="Toggle mobile menu"
         >
           <span className="material-icons">menu</span>
         </button>
       )}
-
       <nav
         id="mobileMenu"
         className={menuOpen ? "mobileMenu open" : "mobileMenu"}
@@ -36,7 +32,7 @@ function Header(props) {
         {menuOpen && (
           <button
             id="closeMenu"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuOpen(!1)}
             aria-label="Close mobile menu"
           >
             <span className="material-icons" id="closeIcon">
@@ -44,7 +40,6 @@ function Header(props) {
             </span>
           </button>
         )}
-
         <div className="mobileNav">
           <ul>
             <li>
@@ -59,14 +54,13 @@ function Header(props) {
           </ul>
         </div>
       </nav>
-
       <nav className="desktopMenu">
         <ul>
           <li>
             <NavLink to="/About">About</NavLink>
           </li>
           <li>
-            <NavLink to="/">Employeelist</NavLink>
+            <NavLink to="/">Employee list</NavLink>
           </li>
           <li>
             <NavLink to="/addEmployee">Add Employee</NavLink>
@@ -76,5 +70,4 @@ function Header(props) {
     </header>
   );
 }
-
 export default Header;
