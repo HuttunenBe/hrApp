@@ -1,16 +1,16 @@
 {
   "employees": [
     {
-      "id": "1",
+      "id": "4092837465102",
       "name": "Aino Virtanen",
       "title": "HR Manager",
-      "salary": 4200,
+      "salary": "25001",
       "phone": "040-1234567",
       "email": "aino.virtanen@example.com",
       "animal": "Owl",
       "startDate": "2018-04-01",
       "location": "Helsinki",
-      "department": "Human Resources",
+      "department": "Human Resource Management",
       "skills": [
         "Recruiting",
         "Communication",
@@ -18,10 +18,10 @@
       ]
     },
     {
-      "id": "2",
+      "id": "6510928374659",
       "name": "Lars Johansson",
       "title": "Finance Manager",
-      "salary": 5000,
+      "salary": "50003",
       "phone": "040-2345678",
       "email": "lars.johansson@example.com",
       "animal": "Bison",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": "8293746512083",
       "name": "Mikko Kallio",
       "title": "Marketing Director",
       "salary": 5500,
@@ -43,7 +43,7 @@
       "email": "mikko.kallio@example.com",
       "animal": "Eagle",
       "startDate": "2019-06-20",
-      "location": "Helsinki",
+      "location": "Oulu",
       "department": "Marketing",
       "skills": [
         "Brand Strategy",
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "7302819465738",
       "name": "Sofia Lehtinen",
       "title": "Sales Manager",
       "salary": 4600,
@@ -60,7 +60,7 @@
       "email": "sofia.lehtinen@example.com",
       "animal": "Dog",
       "startDate": "2017-02-10",
-      "location": "Helsinki",
+      "location": "Lisbon",
       "department": "Sales",
       "skills": [
         "Sales Strategy",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": "5629183746502",
       "name": "Jani Rautio",
       "title": "IT Specialist",
       "salary": 4200,
@@ -86,13 +86,13 @@
       ]
     },
     {
-      "id": "6",
+      "id": "1741238263309",
       "name": "Elina Mikkola",
       "title": "Project Manager",
       "salary": 4800,
       "phone": "040-6789012",
       "email": "elina.mikkola@example.com",
-      "animal": "Owl",
+      "animal": "Cat",
       "startDate": "2015-12-05",
       "location": "Espoo",
       "department": "Project Management",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": "9832174650381",
       "name": "Antti Niemi",
       "title": "Product Manager",
       "salary": 5200,
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": "1741238263315",
       "name": "Tiina Korhonen",
       "title": "Customer Service Manager",
       "salary": 4500,
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": "1728394650873",
       "name": "Jukka Hämäläinen",
       "title": "Legal Advisor",
       "salary": 6000,
@@ -145,7 +145,7 @@
       "email": "jukka.hamalainen@example.com",
       "animal": "Snake",
       "startDate": "2016-11-10",
-      "location": "Helsinki",
+      "location": "Oslo",
       "department": "Legal",
       "skills": [
         "Contract Law",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "2468103579214",
       "name": "Kati Salonen",
       "title": "Operations Manager",
       "salary": 5500,
@@ -162,7 +162,7 @@
       "email": "kati.salonen@example.com",
       "animal": "Bison",
       "startDate": "2017-01-23",
-      "location": "Helsinki",
+      "location": "Vantaa",
       "department": "Operations",
       "skills": [
         "Process Optimization",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": "8309751624830",
       "name": "Ville Koskinen",
       "title": "Business Analyst",
       "salary": 4900,
@@ -188,7 +188,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": "5918372640581",
       "name": "Nina Ojala",
       "title": "HR Specialist",
       "salary": 4300,
@@ -197,7 +197,7 @@
       "animal": "Horse",
       "startDate": "2010-08-25",
       "location": "Tampere",
-      "department": "Human Resources",
+      "department": "Human Resource Management",
       "skills": [
         "Recruitment",
         "Employee Engagement",
@@ -205,7 +205,7 @@
       ]
     },
     {
-      "id": "13",
+      "id": "7284930651729",
       "name": "Paavo Rinne",
       "title": "Supply Chain Manager",
       "salary": 5700,
@@ -222,15 +222,15 @@
       ]
     },
     {
-      "id": "14",
+      "id": "4061829374508",
       "name": "Laura Leino",
       "title": "Quality Assurance Specialist",
-      "salary": 4600,
+      "salary": "4500",
       "phone": "040-4564321",
       "email": "laura.leino@example.com",
       "animal": "Chicken",
       "startDate": "2025-02-11",
-      "location": "Tampere",
+      "location": "Stockholm",
       "department": "Quality Assurance",
       "skills": [
         "Quality Control",
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "id": "15",
+      "id": "8357102946832",
       "name": "Tomi Virtanen",
       "title": "Software Engineer",
       "salary": 5500,
@@ -247,7 +247,7 @@
       "email": "tomi.virtanen@example.com",
       "animal": "Cat",
       "startDate": "2000-11-12",
-      "location": "Helsinki",
+      "location": "Oulu",
       "department": "Engineering",
       "skills": [
         "Java",
@@ -256,198 +256,33 @@
       ]
     },
     {
-      "id": "1747567801473",
-      "name": "Beniitta",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": "1747568257982",
-      "name": "Helena",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": "1747568410499",
-      "name": "bhjk",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": "1747568421713",
-      "name": "Minna",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747569863732,
-      "name": "Annika",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747570033213,
-      "name": "Äiti",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747570071750,
-      "name": "beniitta",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747570319048,
-      "name": "Annukka",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747570853855,
-      "name": "Anisa",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747571339833,
-      "name": "Annaliisa",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747571376500,
+      "id": "1748275357212",
       "name": "Hanna",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
+      "title": "qwsed",
+      "salary": "12345621",
+      "phone": "234",
+      "email": "1234",
+      "animal": "234",
       "startDate": "",
-      "location": "",
-      "department": "",
+      "location": "Oulussa",
+      "department": "It",
       "skills": [
-        ""
+        "123e4"
       ]
     },
     {
-      "id": 1747571942628,
-      "name": "Heti",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
+      "id": "1748275670235",
+      "name": "annananaa",
+      "title": "wedf",
+      "salary": "1234",
+      "phone": "23",
+      "email": "123",
+      "animal": "1234r",
       "startDate": "",
-      "location": "",
-      "department": "",
+      "location": "12",
+      "department": "12",
       "skills": [
-        ""
-      ]
-    },
-    {
-      "id": 1747572265625,
-      "name": "Petri",
-      "title": "",
-      "salary": null,
-      "phone": "",
-      "email": "",
-      "animal": "",
-      "startDate": "",
-      "location": "",
-      "department": "",
-      "skills": [
-        ""
+        "123"
       ]
     }
   ]
