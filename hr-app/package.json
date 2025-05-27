@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "json-server --watch db.json --port 3005",
-     "start": "json-server --watch db.json --port 3005"
-  },
+ "scripts": {
+  "start": "json-server --watch db.json --port 3005",
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "server": "json-server --watch db.json --port 3005"
+}
+,
   "dependencies": {
     "axios": "^1.9.0",
     "react": "^19.0.0",
