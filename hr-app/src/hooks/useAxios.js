@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3005";
+const BASE_URL = "https://hr-app-backend-1-esbm.onrender.com";
 
 const useAxios = () => {
   const get = (url) => axios.get(BASE_URL + url);

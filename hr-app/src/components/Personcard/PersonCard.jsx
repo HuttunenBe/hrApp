@@ -28,7 +28,7 @@ const PersonCard = ({
   const [newLocation, setNewLocation] = useState(location);
   const [newSalary, setNewSalary] = useState(salary);
   const [newDepartment, setNewDepartment] = useState(department);
-  const [newSkills, setNewSkills] = useState(skills);
+  const [newSkills, setNewSkills] = useState(skills. join(", "));
   const handleSave = () => {
     const updatedFields = {};
     if (newSalary !== salary) {
@@ -40,11 +40,11 @@ const PersonCard = ({
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
-    if (newSkills !== skills) {
-      updatedFields.skills = newSkills.split;
+    if (newSkills !== skills.join(", ")) {
+      updatedFields.skills = newSkills  .split(",")
+  .map(skill => skill.trim());
     }
     if (Object.entries(updatedFields).length === 0) {
-      e;
       return;
     }
     onEdit(id, updatedFields);
@@ -54,7 +54,7 @@ const PersonCard = ({
   const handleCancel = () => {
     setNewSalary(salary);
     setNewDepartment(department);
-    setNewSkills(skills);
+    setNewSkills(skills.join(", "));
     setNewLocation(location);
     setIsEditing(!isEditing);
   };
@@ -65,7 +65,7 @@ const PersonCard = ({
     newSkills === "" ||
     (newSalary === salary &&
       newSalary === salary &&
-      newSkills === skills &&
+      newSkills === skills.join(", ") &&
       newLocation === location);
   return (
     <div className="container">
