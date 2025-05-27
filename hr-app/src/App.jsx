@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
-import About from "./pages/about/About";
+import About from "./pages/About/About";
 import PersonList from "./pages/personLIst/PersonList";
 import AddEmployee from "./pages/addEmployee/AddEmployee";
 import useAxios from "../src/hooks/useAxios";
