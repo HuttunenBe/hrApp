@@ -28,7 +28,7 @@ const PersonCard = ({
   const [newLocation, setNewLocation] = useState(location);
   const [newSalary, setNewSalary] = useState(salary);
   const [newDepartment, setNewDepartment] = useState(department);
-  const [newSkills, setNewSkills] = useState(skills);
+const [newSkills, setNewSkills] = useState(skills.join(", "));
   const handleSave = () => {
     const updatedFields = {};
     if (newSalary !== salary) {
@@ -40,12 +40,12 @@ const PersonCard = ({
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
-    if (newSkills !== skills.join(", ")) {
-    updatedFields.skills = newSkills
-      .split(",")
-      .map(skill => skill.trim())
-      .filter(skill => skill.length > 0);
-    }
+ if (newSkills !== skills.join(", ")) {
+  updatedFields.skills = newSkills
+    .split(",")
+    .map(s => s.trim())
+    .filter(Boolean);
+}
     if (Object.entries(updatedFields).length === 0) {
       return;
     }
