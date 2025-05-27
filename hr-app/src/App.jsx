@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
-import axios from "axios";
-import About from "./pages/About";
-import PersonList from "./pages/PersonList";
-import AddEmployee from "./pages/AddEmployee";
-import "./App.css";
+import About from './pages/About/About';
+import PersonList from "./pages/personLIst/PersonList";
+import AddEmployee from "./pages/addEmployee/AddEmployee";
+import useAxios from "../src/hooks/useAxios";
 
 const App = () => {
   const [employeeData, setEmployeeData] = useState([]);
 
+  const { get, patch } = useAxios();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:3005/employees")
+    get("/employees")
       .then((response) => {
         setEmployeeData(response.data);
       })
@@ -20,17 +20,24 @@ const App = () => {
       });
   }, []);
 
-
-  
   const addEmployeeHandler = (newEmployee) => {
-  
-    setEmployeeData((prev) => [...prev, { ...newEmployee }]);
+    setEmployeeData((prev) => [...prev, newEmployee]);
+  };
+
+  const handleEditChange = (id, updatedFields) => {
+    patch(`/employees/${id}`, updatedFields)
+      .then((res) => {
+        setEmployeeData((prev) =>
+          prev.map((employee) => (employee.id === id ? res.data : employee))
+        );
+      })
+      .catch((error) => {
+        console.error("Failed to update price:", error);
+      });
   };
 
   return (
-   
     <BrowserRouter>
-
       <Routes>
         <Route
           path="/"
@@ -38,6 +45,7 @@ const App = () => {
             <PersonList
               employeeData={employeeData}
               setEmployeeData={setEmployeeData}
+              onEdit={handleEditChange} //
             />
           }
         />
