@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://hr-app-backend-1-esbm.onrender.com";
+
+const BASE_URL = "process.env.REACT_APP_API_URL";
 
 const useAxios = () => {
   const get = (url) => axios.get(BASE_URL + url);
@@ -11,3 +12,4 @@ const useAxios = () => {
 };
 
 export default useAxios;
+ 
