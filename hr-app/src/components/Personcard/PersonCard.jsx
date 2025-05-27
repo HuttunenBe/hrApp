@@ -40,10 +40,11 @@ const [newSkills, setNewSkills] = useState(skills.join(", "));
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
- if (newSkills !== skills.join(", ")) {
+if (newSkills !== skills.join(", ")) {
   updatedFields.skills = newSkills
-    .map(s => s.trim())
-    .filter(Boolean);
+    .split(",")               
+    .map((s) => s.trim())    
+    .filter(Boolean);       
 }
     if (Object.entries(updatedFields).length === 0) {
       return;
