@@ -50,6 +50,7 @@ const PersonCard = ({
     onEdit(id, updatedFields);
     setIsEditing(!1);
     alert("Changes saved successfully!");
+    
   };
   const handleCancel = () => {
     setNewSalary(salary);
