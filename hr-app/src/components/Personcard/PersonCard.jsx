@@ -64,7 +64,7 @@ const PersonCard = ({
     newDepartment === "" ||
     newSkills === "" ||
     (newSalary === salary &&
-      newSalary === salary &&
+      newDepartment === department &&
       newSkills === skills.join(", ") &&
       newLocation === location);
   return (
