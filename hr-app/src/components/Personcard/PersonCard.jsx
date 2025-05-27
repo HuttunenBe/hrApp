@@ -42,7 +42,6 @@ const [newSkills, setNewSkills] = useState(skills.join(", "));
     }
  if (newSkills !== skills.join(", ")) {
   updatedFields.skills = newSkills
-    .split(",")
     .map(s => s.trim())
     .filter(Boolean);
 }
