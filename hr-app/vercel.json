@@ -1,5 +1,4 @@
 {
-  "productionBranch": "main",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
