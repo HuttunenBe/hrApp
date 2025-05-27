@@ -150,7 +150,7 @@ if (newSkills !== skills.join(", ")) {
               </div>
             ) : (
               <div>
-                <p className="skills">Skills:{skills && skills}</p>
+                <p className="skills">Skills:{skills && skills.join(", ")}</p>
               </div>
             )}
           </div>
