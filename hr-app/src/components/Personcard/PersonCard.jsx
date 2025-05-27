@@ -28,7 +28,7 @@ const PersonCard = ({
   const [newLocation, setNewLocation] = useState(location);
   const [newSalary, setNewSalary] = useState(salary);
   const [newDepartment, setNewDepartment] = useState(department);
-  const [newSkills, setNewSkills] = useState(skills. join(", "));
+  const [newSkills, setNewSkills] = useState(skills);
   const handleSave = () => {
     const updatedFields = {};
     if (newSalary !== salary) {
@@ -40,9 +40,8 @@ const PersonCard = ({
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
-    if (newSkills !== skills.join(", ")) {
-      updatedFields.skills = newSkills  .split(",")
-  .map(skill => skill.trim());
+    if (newSkills !== skills) {
+      updatedFields.skills = newSkills
     }
     if (Object.entries(updatedFields).length === 0) {
       return;
@@ -55,7 +54,7 @@ const PersonCard = ({
   const handleCancel = () => {
     setNewSalary(salary);
     setNewDepartment(department);
-    setNewSkills(skills.join(", "));
+    setNewSkills(skills);
     setNewLocation(location);
     setIsEditing(!isEditing);
   };
@@ -66,7 +65,7 @@ const PersonCard = ({
     newSkills === "" ||
     (newSalary === salary &&
       newDepartment === department &&
-      newSkills === skills.join(", ") &&
+      newSkills === skills &&
       newLocation === location);
   return (
     <div className="container">
@@ -148,7 +147,7 @@ const PersonCard = ({
               </div>
             ) : (
               <div>
-                <p className="skills">Skills:{skills && skills.join(", ")}</p>
+                <p className="skills">Skills:{skills && skills}</p>
               </div>
             )}
           </div>
