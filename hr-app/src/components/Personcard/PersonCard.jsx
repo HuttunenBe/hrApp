@@ -40,8 +40,11 @@ const PersonCard = ({
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
-    if (newSkills !== skills) {
-      updatedFields.skills = newSkills
+    if (newSkills !== skills.join(", ")) {
+    updatedFields.skills = newSkills
+      .split(",")
+      .map(skill => skill.trim())
+      .filter(skill => skill.length > 0);
     }
     if (Object.entries(updatedFields).length === 0) {
       return;
