@@ -1,1 +1,59 @@
-*{box-sizing:border-box;padding:0;margin:0}body{background-color:#0d2115;font-family:"Roboto","Arial","Geneva","Tahoma",sans-serif;background-image:url(/backgroundImages/backgroundImageSmall.jpg),url(https://images.pexels.com/photos/3228688/pexels-photo-3228688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat;font-size:1.2rem;line-height:1.2;text-align:center}h2{border-bottom:3px #fff solid;color:#fff;font-size:3.2rem;font-weight:700;text-transform:uppercase;margin-bottom:.8rem;margin-top:1.5rem}h3{color:#027668;font-size:2rem;font-weight:500;padding:.5rem 2rem;max-width:480px;margin:0 auto;margin-bottom:.7rem;text-align:center;border-bottom:#b7b7b7 2px solid;border-radius:1rem}main{display:flex;justify-content:center;align-items:flex-start;padding:2rem;background-color:rgb(157 157 157 / .8);min-height:80vh;max-width:100vw;margin:0 auto}@media (max-width:1920px){body{background-image:url(/public/backgroundImages/backgroundImageLarge.jpg);background-size:cover;background-position:center;background-repeat:no-repeat}}@media (max-width:1280px){body{background-image:url(/public/backgroundImages/backgrounImageMedium.jpg);background-size:cover;background-position:center;background-repeat:no-repeat}}@media (max-width:640px){body{background-image:url(/public/backgroundImages/backgroundImageSmall.jpg);background-size:cover;background-position:center;background-repeat:no-repeat}}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #0d2115;
+  font-family: "Roboto", "Arial", "Geneva", "Tahoma", sans-serif;
+  background-image: url("/backgroundImages/backgroundImageSmall.jpg"),
+    url("https://images.pexels.com/photos/3228688/pexels-photo-3228688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+h2 {
+  border-bottom: 3px white solid;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+
+h3 {
+  color: #027668;
+  font-size: 2rem;
+  font-weight: 500;
+
+  padding: 0.5rem 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  border-bottom: #b7b7b7 2px solid;
+  border-radius: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: rgba(157, 157, 157, 0.8);
+  min-height: 80vh;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+
