@@ -59,15 +59,24 @@ main {
 @media (max-width: 1920px) {
   body {
     background-image: url("/public/backgroundImages/backgroundImageLarge.jpg");
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
 }
 @media (max-width: 1280px) {
   body {
     background-image: url("/public/backgroundImages/backgrounImageMedium.jpg");
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
 }
 @media (max-width: 640px) {
   body {
     background-image: url("/public/backgroundImages/backgroundImageSmall.jpg");
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
 }
