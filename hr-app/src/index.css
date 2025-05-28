@@ -8,7 +8,7 @@
 body {
   background-color: #0d2115;
   font-family: "Roboto", "Arial", "Geneva", "Tahoma", sans-serif;
-  background-image: url("/backgroundImages/backgroundImage.jpg") !important;
+  background-image: url("/backgroundImages/backgroundImage.jpg") ;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -60,19 +60,19 @@ main {
 
 @media (max-width: 1920px) {
   body {
-    background-image: url("/public/backgroundImages/backgroundImageLarge.jpg");
+    background-image: url("/backgroundImages/backgroundImageLarge.jpg");
   }
 }
 
 @media (max-width: 1280px) {
   body {
-    background-image: url("/public/backgroundImages/backgroundImageMedium.jpg");
+    background-image: url("/backgroundImages/backgroundImageMedium.jpg");
   }
 }
 
 @media (max-width: 640px) {
   body {
-    background-image: url("/public/backgroundImages/backgroundImageSmall.jpg");
+    background-image: url("/backgroundImages/backgroundImageSmall.jpg");
   }
 }
 
