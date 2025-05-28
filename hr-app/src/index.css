@@ -57,22 +57,3 @@ main {
 }
 
 
-
-@media (max-width: 1920px) {
-  body {
-    background-image: url("/backgroundImages/backgroundImageLarge.jpg");
-  }
-}
-
-@media (max-width: 1280px) {
-  body {
-    background-image: url("/backgroundImages/backgroundImageMedium.jpg");
-  }
-}
-
-@media (max-width: 640px) {
-  body {
-    background-image: url("/backgroundImages/backgroundImageSmall.jpg");
-  }
-}
-
