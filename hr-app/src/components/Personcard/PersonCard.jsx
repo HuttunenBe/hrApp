@@ -28,7 +28,7 @@ const PersonCard = ({
   const [newLocation, setNewLocation] = useState(location);
   const [newSalary, setNewSalary] = useState(salary);
   const [newDepartment, setNewDepartment] = useState(department);
-const [newSkills, setNewSkills] = useState(skills.join(", "));
+  const [newSkills, setNewSkills] = useState(skills.join(", "));
   const handleSave = () => {
     const updatedFields = {};
     if (newSalary !== salary) {
@@ -40,19 +40,18 @@ const [newSkills, setNewSkills] = useState(skills.join(", "));
     if (newDepartment !== department) {
       updatedFields.department = newDepartment;
     }
-if (newSkills !== skills.join(", ")) {
-  updatedFields.skills = newSkills
-    .split(",")               
-    .map((s) => s.trim())    
-    .filter(Boolean);       
-}
+    if (newSkills !== skills.join(", ")) {
+      updatedFields.skills = newSkills
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+    }
     if (Object.entries(updatedFields).length === 0) {
       return;
     }
     onEdit(id, updatedFields);
     setIsEditing(!1);
     alert("Changes saved successfully!");
-    
   };
   const handleCancel = () => {
     setNewSalary(salary);
@@ -150,7 +149,7 @@ if (newSkills !== skills.join(", ")) {
               </div>
             ) : (
               <div>
-               <p> Skills: {(skills ?? []).join(", ")}</p>
+                <p> Skills: {(skills ?? []).join(", ")}</p>
               </div>
             )}
           </div>

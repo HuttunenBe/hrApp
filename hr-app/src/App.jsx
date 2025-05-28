@@ -7,7 +7,6 @@ import PersonList from "./pages/personLIst/PersonList";
 import AddEmployee from "./pages/addEmployee/AddEmployee";
 import useAxios from "../src/hooks/useAxios";
 
-
 const App = () => {
   const [employeeData, setEmployeeData] = useState([]);
 
