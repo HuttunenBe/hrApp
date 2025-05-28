@@ -1,18 +1,16 @@
-
-import finance from './DepartmentImages/finance.jpg';
-import supplyChain from './DepartmentImages/supplyChain.jpg';
-import marketing from './DepartmentImages/marketing.jpg';
-import sales from './DepartmentImages/sales.jpg';
-import it from './DepartmentImages/it.jpg';
-import projectManagement from './DepartmentImages/projectManagement.jpg';
-import productDevelopment from './DepartmentImages/productDevelopment.jpg';
-import customerService from './DepartmentImages/customerService.jpg';
-import legal from './DepartmentImages/legal.jpg';
-import businessAnalysis from './DepartmentImages/businessAnalysis.jpg';
-import qualityAssurance from './DepartmentImages/qualityAssurance.jpg';
-import defaultImg from './DepartmentImages/default.jpg';
-import humanResources from './DepartmentImages/humanResources.jpg';
-
+import finance from "./DepartmentImages/finance.jpg";
+import supplyChain from "./DepartmentImages/supplyChain.jpg";
+import marketing from "./DepartmentImages/marketing.jpg";
+import sales from "./DepartmentImages/sales.jpg";
+import it from "./DepartmentImages/it.jpg";
+import projectManagement from "./DepartmentImages/projectManagement.jpg";
+import productDevelopment from "./DepartmentImages/productDevelopment.jpg";
+import customerService from "./DepartmentImages/customerService.jpg";
+import legal from "./DepartmentImages/legal.jpg";
+import businessAnalysis from "./DepartmentImages/businessAnalysis.jpg";
+import qualityAssurance from "./DepartmentImages/qualityAssurance.jpg";
+import defaultImg from "./DepartmentImages/default.jpg";
+import humanResources from "./DepartmentImages/humanResources.jpg";
 
 const GetDepartmentImage = (department) => {
   if (department === "Human Resource Management") return humanResources;

@@ -36,7 +36,6 @@
   max-width: 350px;
   margin: 0 auto;
   text-align: left;
-  
 }
 
 .textContent {
@@ -103,18 +102,18 @@ section img {
 
 .imageThree {
   max-width: 40vw;
-    width: 100%;
+  width: 100%;
 }
 
 .imageTwo,
 .imageFour {
   max-width: 30vw;
-    width: 100%;
+  width: 100%;
 }
 
 .imageOne {
   max-width: 40vw;
-    width: 100%;
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
