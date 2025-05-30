@@ -7,7 +7,7 @@ A human resources management app built as the final project for the React course
 ### ✅ Features
 #### Employee List:
 - Display a list of employees
--  Detailed employee information including years of service, department images and personalized reminders
+- Detailed employee information including years of service, department images and personalized reminders
 - Edit employee details
 - Form to add new employees
 - Information page about the app
@@ -25,8 +25,8 @@ A human resources management app built as the final project for the React course
 
 I learned so much through this project. I got to experience what it’s like to work with the React framework and manage multiple files. It really makes things easier especially when it comes to keeping the code clean. I spent a lot of time on CSS and I’m pretty happy how it turned out. 
 
-* UseState : Managing form input
-* UseEffect:  Loading data when page loads
+* UseState : Adding state to components
+* UseEffect: Running side effects like fetching employee data when the app loads
 * UseNavigate:  Navigating after adding an employee
 * Routes, BrowserRouter: Switching between pages
 * Conditional rendering: Show or hide components like mobile menu
@@ -34,7 +34,7 @@ I learned so much through this project. I got to experience what it’s like to 
 * Date.now():  Generating unique IDs
 * Props:  Pass data to components
 * Event handling: Handling input changes and form submission
-* State lifting: Sharing data from child to parent to update the employee list
+* State lifting: Sharing data from child to parent component
 
 ---
 
