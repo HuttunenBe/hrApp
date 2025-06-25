@@ -1,6 +1,6 @@
 # 🧑‍🤝‍🧑 HR App
 
-A human resources management app built as the final project for the React course at Business College Helsinki. The app lets you manage employee profiles, view about page and add new employees.
+A human resources management app built as the final project for the React course at Business College Helsinki. The app lets you manage employee profiles, view about page and add and edit new employees.
 
 ---
 
