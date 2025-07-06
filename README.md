@@ -45,3 +45,4 @@ I learned so much through this project. I got to experience what it’s like to 
 * JavaScript 
 * CSS
 * HTML
+* Backend files: https://github.com/HuttunenBe/hrAppBackend
