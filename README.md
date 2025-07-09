@@ -5,19 +5,22 @@ A human resources management app built as the final project for the React course
 ---
 
 ### ✅ Features
-#### Employee List:
-- Display a list of employees
-- Detailed employee information including years of service, department images and personalized reminders
-- Edit employee details
-- Form to add new employees
-- Information page about the app
-- Header and footer with navigation links to different pages
-- Department images that change based on the department
-- Desktop and mobile friendly menu
-- Responsive design for different screen sizes
-- Moving logo that takes you back to about page
-- Back to top button
-- Vercel link https://vercel.com/beniittas-projects/hr-app
+#### 🗂️ Employee List:
+- 📋 Display a list of employees
+- 📄 Detailed employee information including years of service, department images and personalized reminders
+- ✏️ Edit employee details
+- 📝 Form to add new employees
+- ℹ️ Information page about the app
+- 🧭 Header and footer with navigation links to different pages
+- 🏢 Department images that change based on the department
+- 📱 Desktop and mobile friendly menu
+- 📐 Responsive design for different screen sizes
+- 🔄 Moving logo that takes you back to about page
+- ⬆️ Back to top button
+
+🌐 Vercel link https://vercel.com/beniittas-projects/hr-app
+
+
 
 ---
 
