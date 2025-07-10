@@ -18,7 +18,7 @@ A human resources management app built as the final project for the React course
 - 🔄 Moving logo that takes you back to about page
 - ⬆️ Back to top button
 
-🌐 Vercel link https://vercel.com/beniittas-projects/hr-app
+🌐 Vercel link https://vercel.com/beniittas-projects/hr-app (employee tickets might download pretty slow)
 
 
 
