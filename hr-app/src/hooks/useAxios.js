@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3005";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const useAxios = () => {
   const get = (url) => axios.get(BASE_URL + url);
