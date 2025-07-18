@@ -6,7 +6,7 @@ A human resources management app built as the final project for the React course
 
 ### ✅ Features
 #### 🗂️ Employee List:
-* 📋 Display a list of employees
+* 📋 Display a list of employees 
 * 📄 Detailed employee information including years of service, department images and personalized reminders
 * ✏️ Edit employee details
 * 📝 Form to add new employees
