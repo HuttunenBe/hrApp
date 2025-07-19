@@ -2,8 +2,6 @@
 
 A human resources management app built as the final project for the React course at Business College Helsinki. The app lets you manage employee profiles, view about page and add and edit new employees.
 
-____
-
 ## 🌐 Live Demo
 [**HR App on Vercel**](https://hr-app-dun.vercel.app/)
 
@@ -11,8 +9,7 @@ ____
 
 ---
 
-### ✅ Features
-#### 🗂️ Employee List:
+## ✅ Features
 * 📋 Display a list of employees 
 * 📄 Detailed employee information including years of service, department images and personalized reminders
 * ✏️ Edit employee details
@@ -33,7 +30,7 @@ ____
 ---
 
 
-### 💻 What I learned 
+## 💻 What I learned 
 
 I learned so much through this project. I got to experience what it’s like to work with the React framework and manage multiple files. It really makes things easier especially when it comes to keeping the code clean. I spent a lot of time on CSS and I’m pretty happy how it turned out. 
 
@@ -51,7 +48,7 @@ I learned so much through this project. I got to experience what it’s like to 
 ---
 
 
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 * React 
 * JavaScript 
 * CSS
