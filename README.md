@@ -2,6 +2,13 @@
 
 A human resources management app built as the final project for the React course at Business College Helsinki. The app lets you manage employee profiles, view about page and add and edit new employees.
 
+____
+
+### 🚀  Demo
+[**HR App on Vercel**](https://hr-app-dun.vercel.app/)
+
+> **Note:** Employee tickets might download slow
+
 ---
 
 ### ✅ Features
@@ -18,10 +25,7 @@ A human resources management app built as the final project for the React course
 * 🔄 Moving logo that takes you back to about page
 * ⬆️ Back to top button
 
-### 🚀  Demo
-[**HR App on Vercel**](https://hr-app-dun.vercel.app/)
 
-> **Note:** Employee tickets might download slow
 
 
 
