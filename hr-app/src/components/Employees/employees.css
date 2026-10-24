@@ -3,9 +3,8 @@
   font-size: 2.2rem;
   margin-top: 1.2rem;
 }
-
-#departmentPicture,
-.skeletonPicture {
+#departmentPicture {
+  background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,24 +14,12 @@
   min-height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: -90px;
   margin-bottom: 1rem;
   border: rgb(255 255 255 / 0.85) 3px solid;
   box-shadow: 0 6px 7px rgb(0 0 0 / 0.6);
 }
-
-#departmentPicture {
-  background-color: #000;
-  margin-top: -90px;
-}
-
-.skeletonPicture {
-  background-color: #dedede;
-  margin-top: -30px;
-  animation: skeletonPulse 1.5s ease-in-out infinite;
-}
-
-.containerTwo,
-.employeeSkeletonInner {
+.containerTwo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,24 +29,16 @@
   padding: 1.5rem 2rem;
   border-radius: 2rem;
   width: 350px;
-  box-sizing: border-box;
-  background-color: #fffc;
-}
-
-.containerTwo {
   height: auto;
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.2);
   border-bottom: 3px solid #ddd;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background-color: #fffc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .containerTwo:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.6);
 }
-
 .containerTwo p {
   font-size: 1rem;
   margin: 0;
@@ -67,16 +46,13 @@
   line-height: 1.6;
   text-align: center;
 }
-
-.container,
-.employeeSkeleton {
+.container {
   border: #000 solid 3px;
   padding: 0.4rem;
   border-radius: 2rem;
   background-color: #0e320eda;
   box-shadow: 0 4px 4px rgb(0 0 0 / 0.6);
 }
-
 .employeeTickets {
   display: flex;
   flex-direction: row;
@@ -85,7 +61,6 @@
   gap: 1.5rem;
   margin-top: 5rem;
 }
-
 .message {
   color: #0f1c10;
   background-color: #ffffffce;
@@ -95,33 +70,18 @@
   padding: 2rem;
   margin-bottom: 3rem;
 }
-
 button {
   margin: 0.2rem;
 }
-
 .Skills {
   font-weight: 700;
 }
-
-.testLabel {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #fff;
-  background-color: #857d85;
-  padding: 0.4rem 1.2rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
 @media (max-width: 789px) {
-  .containerTwo,
-  .employeeSkeletonInner {
+.containerTwo {
     width: 72vw;
     height: auto;
   }
-
-  .containerTwo p {
+.containerTwo p {
     font-size: 1rem;
   }
 }

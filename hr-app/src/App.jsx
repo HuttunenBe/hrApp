@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import About from "./pages/About/About";
@@ -7,11 +6,9 @@ import AddEmployee from "./pages/addEmployee/AddEmployee";
 import useAxios from "../src/hooks/useAxios";
 
 const App = () => {
-  const [employeeData, setEmployeeData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState("");
+const [employeeData, setEmployeeData] = useState([]);
 
-  const { get, patch } = useAxios();
+const { get, patch } = useAxios();
 
   useEffect(() => {
     get("/employees")
@@ -19,30 +16,23 @@ const App = () => {
         setEmployeeData(response.data);
       })
       .catch((error) => {
-        console.error("Error loading employees", error);
-        setError("Could not load employees. Please try again.");
-      })
-      .finally(() => {
-        setIsLoading(false);
+console.error("Error loading employees", error);
       });
   }, []);
 
-  const addEmployeeHandler = (newEmployee) => {
+const addEmployeeHandler = (newEmployee) => {
     setEmployeeData((prev) => [...prev, newEmployee]);
   };
 
-  const handleEditChange = (id, updatedFields) => {
-    return patch(`/employees/${id}`, updatedFields)
-      .then((response) => {
+const handleEditChange = (id, updatedFields) => {
+    patch(`/employees/${id}`, updatedFields)
+      .then((res) => {
         setEmployeeData((prev) =>
-          prev.map((employee) =>
-            employee.id === id ? response.data : employee
-          )
+prev.map((employee) => (employee.id === id ? res.data : employee))
         );
       })
       .catch((error) => {
-        console.error("Failed to update employee:", error);
-        throw error;
+console.error("Failed to update price:", error);
       });
   };
 
@@ -50,29 +40,22 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
-          element={
+path="/"
+element={
             <PersonList
-              employeeData={employeeData}
-              setEmployeeData={setEmployeeData}
-              onEdit={handleEditChange}
-              isLoading={isLoading}
-              error={error}
+employeeData={employeeData}
+setEmployeeData={setEmployeeData}
+onEdit={handleEditChange} //
             />
           }
         />
-
         <Route path="/about" element={<About />} />
-
         <Route
-          path="/addEmployee"
-          element={
-            <AddEmployee onAddEmployee={addEmployeeHandler} />
-          }
+path="/addEmployee"
+element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
         />
       </Routes>
     </BrowserRouter>
   );
 };
-
 export default App;

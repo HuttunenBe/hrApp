@@ -1,80 +1,80 @@
 import "../Employees/employees.css";
 import { useState } from "react";
 const PersonCard = ({
-  id,
-  name,
-  title,
-  salary,
-  phone,
-  email,
-  animal,
-  animalEmoji,
-  startDate,
-  location,
-  department,
-  skills = [],
-  yearsInService,
-  reminder,
-  departmentImage,
-  onEdit,
-  reminderEmoji,
-  onSkillsChange,
-  onSalaryChange,
-  onLocationChange,
-  onDepartmentChange,
+id,
+name,
+title,
+salary,
+phone,
+email,
+animal,
+animalEmoji,
+startDate,
+location,
+department,
+skills = [],
+yearsInService,
+reminder,
+departmentImage,
+onEdit,
+reminderEmoji,
+onSkillsChange,
+onSalaryChange,
+onLocationChange,
+onDepartmentChange,
   ...rest
 }) => {
-  const [isEditing, setIsEditing] = useState(!1);
-  const [newLocation, setNewLocation] = useState(location);
-  const [newSalary, setNewSalary] = useState(salary);
-  const [newDepartment, setNewDepartment] = useState(department);
-  const [newSkills, setNewSkills] = useState(skills);
-  const handleSave = () => {
-    const updatedFields = {};
+const [isEditing, setIsEditing] = useState(!1);
+const [newLocation, setNewLocation] = useState(location);
+const [newSalary, setNewSalary] = useState(salary);
+const [newDepartment, setNewDepartment] = useState(department);
+const [newSkills, setNewSkills] = useState(skills);
+const handleSave = () => {
+const updatedFields = {};
     if (newSalary !== salary) {
-      updatedFields.salary = newSalary;
+updatedFields.salary = newSalary;
     }
     if (newLocation !== location) {
-      updatedFields.location = newLocation;
+updatedFields.location = newLocation;
     }
     if (newDepartment !== department) {
-      updatedFields.department = newDepartment;
+updatedFields.department = newDepartment;
     }
     if (newSkills !== skills) {
-      updatedFields.skills = newSkills.split;
+updatedFields.skills = newSkills.split;
     }
     if (Object.entries(updatedFields).length === 0) {
-      e;
+e;
       return;
     }
     onEdit(id, updatedFields);
     setIsEditing(!1);
     alert("Changes saved successfully!");
   };
-  const handleCancel = () => {
+const handleCancel = () => {
     setNewSalary(salary);
     setNewDepartment(department);
     setNewSkills(skills);
     setNewLocation(location);
     setIsEditing(!isEditing);
   };
-  const isSaveDisabled =
-    newLocation === "" ||
-    newSalary === "" ||
-    newDepartment === "" ||
-    newSkills === "" ||
+const isSaveDisabled =
+newLocation === "" ||
+newSalary === "" ||
+newDepartment === "" ||
+newSkills === "" ||
     (newSalary === salary &&
-      newSalary === salary &&
-      newSkills === skills &&
-      newLocation === location);
+newSalary === salary &&
+newSkills === skills &&
+newLocation === location);
   return (
     <div className="container">
       <div className="containerTwo">
         <img
-          src={departmentImage}
-          id="departmentPicture"
-          alt="department images"
-          loading="lazy"
+src={departmentImage}
+id="departmentPicture"
+alt="department images"
+loading="lazy"
         />
         <p className="id">Id: {id}</p>
         <p>Name: {name}</p>
@@ -84,9 +84,9 @@ const PersonCard = ({
             <div>
               Salary:{" "}
               <input
-                type="text"
-                value={newSalary}
-                onChange={(e) => setNewSalary(e.target.value)}
+type="text"
+value={newSalary}
+onChange={(e) => setNewSalary(e.target.value)}
               />
             </div>
           ) : (
@@ -107,9 +107,9 @@ const PersonCard = ({
             <div>
               Location:{" "}
               <input
-                type="text"
-                value={newLocation}
-                onChange={(e) => setNewLocation(e.target.value)}
+type="text"
+value={newLocation}
+onChange={(e) => setNewLocation(e.target.value)}
               />
             </div>
           ) : (
@@ -123,9 +123,9 @@ const PersonCard = ({
             <div>
               Department:{" "}
               <input
-                type="text"
-                value={newDepartment}
-                onChange={(e) => setNewDepartment(e.target.value)}
+type="text"
+value={newDepartment}
+onChange={(e) => setNewDepartment(e.target.value)}
               />
             </div>
           ) : (
@@ -140,9 +140,9 @@ const PersonCard = ({
               <div>
                 Skills:{" "}
                 <input
-                  type="text"
-                  value={newSkills}
-                  onChange={(e) => setNewSkills(e.target.value)}
+type="text"
+value={newSkills}
+onChange={(e) => setNewSkills(e.target.value)}
                 />
               </div>
             ) : (
