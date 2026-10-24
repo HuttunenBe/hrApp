@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import About from "./pages/About/About";
@@ -7,6 +8,8 @@ import useAxios from "../src/hooks/useAxios";
 
 const App = () => {
   const [employeeData, setEmployeeData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const { get, patch } = useAxios();
 
@@ -17,6 +20,10 @@ const App = () => {
       })
       .catch((error) => {
         console.error("Error loading employees", error);
+        setError("Could not load employees. Please try again.");
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -25,14 +32,17 @@ const App = () => {
   };
 
   const handleEditChange = (id, updatedFields) => {
-    patch(`/employees/${id}`, updatedFields)
-      .then((res) => {
+    return patch(`/employees/${id}`, updatedFields)
+      .then((response) => {
         setEmployeeData((prev) =>
-          prev.map((employee) => (employee.id === id ? res.data : employee))
+          prev.map((employee) =>
+            employee.id === id ? response.data : employee
+          )
         );
       })
       .catch((error) => {
-        console.error("Failed to update price:", error);
+        console.error("Failed to update employee:", error);
+        throw error;
       });
   };
 
@@ -45,17 +55,24 @@ const App = () => {
             <PersonList
               employeeData={employeeData}
               setEmployeeData={setEmployeeData}
-              onEdit={handleEditChange} //
+              onEdit={handleEditChange}
+              isLoading={isLoading}
+              error={error}
             />
           }
         />
+
         <Route path="/about" element={<About />} />
+
         <Route
           path="/addEmployee"
-          element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
+          element={
+            <AddEmployee onAddEmployee={addEmployeeHandler} />
+          }
         />
       </Routes>
     </BrowserRouter>
   );
 };
+
 export default App;

@@ -85,3 +85,87 @@ button {
     font-size: 1rem;
   }
 }
+
+
+
+/* Placeholders for employee cards */
+
+.employeeSkeleton {
+  border: #000 solid 3px;
+  padding: 0.4rem;
+  border-radius: 2rem;
+  background-color: #0e320eda;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 0.6);
+}
+
+.employeeSkeletonInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  width: 350px;
+  min-height: 350px;
+  box-sizing: border-box;
+  background-color: #fffc;
+}
+
+.skeletonPicture {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-top: -30px;
+  margin-bottom: 1rem;
+  background-color: #dedede;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeletonLine {
+  width: 85%;
+  height: 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  background-color: #dedede;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeletonLine.short {
+  width: 55%;
+}
+
+.skeletonLine.title {
+  width: 70%;
+  height: 20px;
+  margin-bottom: 16px;
+}
+
+@keyframes skeletonPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 789px) {
+  .employeeSkeletonInner {
+    width: 72vw;
+    max-width: 350px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeletonPicture,
+  .skeletonLine {
+    animation: none;
+  }
+}
+
+
