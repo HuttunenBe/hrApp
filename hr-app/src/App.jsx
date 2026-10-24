@@ -6,9 +6,10 @@ import AddEmployee from "./pages/addEmployee/AddEmployee";
 import useAxios from "../src/hooks/useAxios";
 
 const App = () => {
-const [employeeData, setEmployeeData] = useState([]);
+  const [employeeData, setEmployeeData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-const { get, patch } = useAxios();
+  const { get, patch } = useAxios();
 
   useEffect(() => {
     get("/employees")
@@ -16,23 +17,26 @@ const { get, patch } = useAxios();
         setEmployeeData(response.data);
       })
       .catch((error) => {
-console.error("Error loading employees", error);
+        console.error("Error loading employees", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
-const addEmployeeHandler = (newEmployee) => {
+  const addEmployeeHandler = (newEmployee) => {
     setEmployeeData((prev) => [...prev, newEmployee]);
   };
 
-const handleEditChange = (id, updatedFields) => {
+  const handleEditChange = (id, updatedFields) => {
     patch(`/employees/${id}`, updatedFields)
       .then((res) => {
         setEmployeeData((prev) =>
-prev.map((employee) => (employee.id === id ? res.data : employee))
+          prev.map((employee) => (employee.id === id ? res.data : employee)),
         );
       })
       .catch((error) => {
-console.error("Failed to update price:", error);
+        console.error("Failed to update price:", error);
       });
   };
 
@@ -40,19 +44,20 @@ console.error("Failed to update price:", error);
     <BrowserRouter>
       <Routes>
         <Route
-path="/"
-element={
+          path="/"
+          element={
             <PersonList
-employeeData={employeeData}
-setEmployeeData={setEmployeeData}
-onEdit={handleEditChange} //
+              employeeData={employeeData}
+              setEmployeeData={setEmployeeData}
+              onEdit={handleEditChange}
+              isLoading={isLoading}
             />
           }
         />
         <Route path="/about" element={<About />} />
         <Route
-path="/addEmployee"
-element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
+          path="/addEmployee"
+          element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
         />
       </Routes>
     </BrowserRouter>
